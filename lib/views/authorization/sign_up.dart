@@ -19,15 +19,10 @@ class SignUp extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => SignUpEmail()),
               );
             },
-          )),
-      Padding(
-          padding: EdgeInsets.all(5.0),
-          child: SignInButton(
-            Buttons.Google,
-            text: "Sign up with Google",
-            onPressed: () {},
-          )),
-    ]);
+          )
+        ),
+      ]
+    );
   }
 }
 

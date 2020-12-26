@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1062143757773-mukmimabrt8t2gkjufgcigrikkouukog.apps.googleusercontent.com</string>
+	<string>1062143757773-g3iidc097rlfr9lhlramo1ip93ok4upn.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1062143757773-mukmimabrt8t2gkjufgcigrikkouukog</string>
+	<string>com.googleusercontent.apps.1062143757773-g3iidc097rlfr9lhlramo1ip93ok4upn</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCYwSEzZPbHC_3HsA4FC_5xLpFWMd44gUU</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.flutterFirebaseAuth</string>
+	<string>com.example.flutterFirebaseAuthorization</string>
 	<key>PROJECT_ID</key>
 	<string>flutter-firebase-auth-552c2</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1062143757773:ios:8b436c8dd1af9db3400884</string>
+	<string>1:1062143757773:ios:93ac90fac0c9abed400884</string>
 </dict>
 </plist>
