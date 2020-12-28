@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutter_firebase_auth/views/app.dart';
-
+import 'package:google_sign_in/google_sign_in.dart';
 
 class SignIn extends StatelessWidget {
   @override
@@ -38,7 +38,13 @@ class SignIn extends StatelessWidget {
           child: SignInButton(
             Buttons.GoogleDark,
             text: "Sign In with Google",
-            onPressed: () {},
+            onPressed: () {
+              GooglLinkeSignIn()._signInWithGoogle(context);
+              // Navigator.push(
+              // context,
+              // MaterialPageRoute(builder: (context) => ),
+            // );
+            },
           )),
     ]);
   }
@@ -470,4 +476,41 @@ class _EmailLinkSignInState extends State<EmailLinkSignIn> with WidgetsBindingOb
     super.dispose();
   }
   
+}
+
+class GooglLinkeSignIn extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );    
+  }
+
+  Future<UserCredential> _signInWithGoogle(BuildContext context) async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount googleUser = await GoogleSignIn().signIn() ;
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+
+    // Create a new credential
+    final GoogleAuthCredential credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    // Once signed in, return the UserCredential
+    final test = await FirebaseAuth.instance.signInWithCredential(credential);
+    String name = test.additionalUserInfo.profile['given_name'];
+    
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute( builder: (context) => App(name: name, uid: test.user.uid)),
+      (Route<dynamic> route) => false
+    );
+    
+    return test;
+  }
+
 }

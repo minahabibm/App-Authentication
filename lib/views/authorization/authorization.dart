@@ -37,7 +37,7 @@ class _Authorization extends State<Authorization> {
       _visible = true;
     });
   } */
-
+    
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,7 +154,7 @@ class _Authorization extends State<Authorization> {
                 ),
               ),
             ),
-            
+
           ]),
       )/* ,
       bottomNavigationBar: Padding(

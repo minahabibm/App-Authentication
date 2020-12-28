@@ -35,6 +35,7 @@ class _AppState extends State<App> {
 
   void signOutFirebase() async {
     try {
+      // to avoid silently logining back in for the same google user use google signout.
       await _firebaseAuth.signOut();
       print("_!_");
       await Navigator.pushAndRemoveUntil(
