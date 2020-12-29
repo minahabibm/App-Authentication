@@ -46,7 +46,32 @@ class SignIn extends StatelessWidget {
             // );
             },
           )),
+      Padding(
+          padding: EdgeInsets.all(5.0),
+          child: SignInButton(
+            Buttons.FacebookNew,
+            text: "Sign In with Facebook",
+            onPressed: () {
+              // Navigator.push(
+              // context,
+              // MaterialPageRoute(builder: (context) => ),
+            // );
+            },
+          )),
+      Padding(
+          padding: EdgeInsets.all(5.0),
+          child: SignInButton(
+            Buttons.AppleDark,
+            text: "Sign In with Apple",
+            onPressed: () {
+              // Navigator.push(
+              // context,
+              // MaterialPageRoute(builder: (context) => ),
+            // );
+            },
+          )),
     ]);
+    
   }
 }
 
